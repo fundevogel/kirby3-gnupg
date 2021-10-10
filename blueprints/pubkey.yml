@@ -1,0 +1,104 @@
+title:
+  de: PGP-Schlüssel
+  en: PGP key
+
+accept:
+  extension: asc
+
+columns:
+  content:
+    width: 3/4
+    sections:
+      fields:
+        type: fields
+        fields:
+          key:
+            extends: files/gnupg/key
+            icon: key
+            width: 1/3
+          fpr:
+            label: Fingerprint
+            type: text
+            icon: unlock
+            width: 2/3
+            disabled: true
+            translate: false
+          algorithm:
+            extends: files/gnupg/algo
+            width: 1/4
+          crypto:
+            extends: files/gnupg/crypto
+            width: 1/4
+          length:
+            extends: files/gnupg/length
+            width: 1/4
+          type:
+            extends: files/gnupg/type
+            width: 1/4
+          name:
+            type: text
+            width: 1/4
+            disabled: true
+            translate: false
+          comment:
+            label:
+              de: Kommentar
+              en: Comment
+            type: text
+            width: 1/4
+            disabled: true
+            translate: false
+          email:
+            type: email
+            width: 2/4
+            disabled: true
+            translate: false
+          subkeys:
+            label:
+              de: Unterschlüssel
+              en: Subkeys
+            type: structure
+            columns:
+              key:
+                width: 1/6
+              created:
+              expires:
+              algorithm:
+              length:
+                after: bits
+              crypto:
+                width: 1/4
+              type:
+            fields:
+              key:
+                extends: files/gnupg/key
+                width: 1/3
+              created:
+                extends: files/gnupg/created
+                width: 1/3
+              expires:
+                extends: files/gnupg/expires
+                width: 1/3
+              algorithm:
+                extends: files/gnupg/algo
+                width: 1/4
+              crypto:
+                extends: files/gnupg/crypto
+                width: 1/4
+              length:
+                extends: files/gnupg/length
+                width: 1/4
+              type:
+                extends: files/gnupg/type
+                width: 1/4
+            disabled: true
+            translate: false
+
+  sidebar:
+    width: 1/4
+    sections:
+      aside:
+        type: fields
+        fields:
+          created: files/gnupg/created
+          expires: files/gnupg/expires
