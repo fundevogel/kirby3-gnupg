@@ -1,0 +1,35 @@
+{
+    "name": "fundevogel/kirby3-gnupg",
+    "description": "Add information about PGP public keys on upload in Kirby v3",
+    "type": "kirby-plugin",
+    "license": "MIT",
+    "version": "1.0.0",
+    "keywords": ["getkirby", "kirby", "kirby3", "kirby-plugin", "pgp", "openpgp", "gpg", "gnupg", "encryption", "public-key-encryption", "cryptography", "public-key-cryptography", "rsa", "dsa", "elgamal", "ecc"],
+    "scripts": {
+        "cs-dry": "php-cs-fixer fix --dry-run --diff",
+        "cs-fix": "php-cs-fixer fix"
+    },
+    "authors": [
+        {
+            "name": "Kinder- und Jugendbuchhandlung Fundevogel",
+            "email": "maschinenraum@fundevogel.de",
+            "homepage": "https://fundevogel.de",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Martin Folkers",
+            "email": "hello@twobrain.io",
+            "homepage": "https://twobrain.io",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "getkirby/composer-installer": "^1.1"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.14"
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}

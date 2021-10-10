@@ -1,0 +1,7 @@
+label:
+  de: Länge
+  en: Length
+type: text
+after: bits
+disabled: true
+translate: false

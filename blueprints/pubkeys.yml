@@ -1,0 +1,8 @@
+headline:
+  de: PGP-Schlüssel
+  en: PGP keys
+type: files
+template: pubkey
+sortBy: filename desc
+text: "ID: {{ file.key }}"
+info: "{{ file.algorithm }} ({{ file.length}} bits)"
