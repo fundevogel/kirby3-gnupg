@@ -3,7 +3,7 @@
     "description": "Add information about PGP public keys on upload in Kirby v3",
     "type": "kirby-plugin",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "keywords": ["getkirby", "kirby", "kirby3", "kirby-plugin", "pgp", "openpgp", "gpg", "gnupg", "encryption", "public-key-encryption", "cryptography", "public-key-cryptography", "rsa", "dsa", "elgamal", "ecc"],
     "scripts": {
         "cs-dry": "php-cs-fixer fix --dry-run --diff",
