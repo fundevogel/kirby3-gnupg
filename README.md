@@ -46,10 +46,13 @@ For convenience, the [section blueprint](https://getkirby.com/docs/reference/pan
 
 ![File blueprint, powered by kirby3-gnupg](./file.png)
 
+WIP: Starting with v1.1.0, files field `fields/pubkey` for single pubkey is included!
+
 
 ## Roadmap
 
 - [ ] Add check for `gpg` binary
+- [x] Add `files` field
 
 
 ## License

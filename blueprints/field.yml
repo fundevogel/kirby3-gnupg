@@ -1,8 +1,9 @@
-headline:
+label:
   de: PGP-Schlüssel
-  en: PGP keys
+  en: PGP key
 type: files
+multiple: false
 template: pubkey
-sortBy: filename desc
+query: site.files.filterBy('template', 'pubkey')
 text: "ID: {{ file.key }}"
 info: "{{ file.algorithm }} ({{ file.length }} bits)"
