@@ -19,6 +19,7 @@ use Fundevogel\GnuPG;
  */
 Kirby::plugin('fundevogel/gnupg', [
     'blueprints' => [
+        'fields/pubkey'       => __DIR__ . '/blueprints/field.yml',
         'files/pubkey'        => __DIR__ . '/blueprints/pubkey.yml',
         'files/gnupg/key'     => __DIR__ . '/blueprints/base/key.yml',
         'files/gnupg/created' => __DIR__ . '/blueprints/base/created.yml',
