@@ -5,7 +5,6 @@ namespace Fundevogel;
 use Kirby\Toolkit\A;
 use Kirby\Toolkit\Str;
 
-
 /**
  * Class GnuPG
  *
@@ -119,18 +118,18 @@ class GnuPG
                 }
 
                 # (2) Check for "name <email>" format
-                else if (preg_match('/^([^<]+)\s+&lt;([^>]+)&gt;$/', $line, $matches)) {
+                elseif (preg_match('/^([^<]+)\s+&lt;([^>]+)&gt;$/', $line, $matches)) {
                     $data['name']  = trim($matches[1]);
                     $data['email'] = trim($matches[2]);
                 }
 
                 # (3) Check for "name" format
-                else if (preg_match('/^([^<]+)$/', $line, $matches)) {
+                elseif (preg_match('/^([^<]+)$/', $line, $matches)) {
                     $data['name'] = trim($matches[1]);
                 }
 
                 # (4) Check for "<email>" format
-                else if (preg_match('/^&lt;([^>]+)&gt;$/', $line, $matches)) {
+                elseif (preg_match('/^&lt;([^>]+)&gt;$/', $line, $matches)) {
                     $data['email'] = trim($matches[2]);
                 }
 
@@ -264,7 +263,7 @@ class GnuPG
         }
 
         # (2) ECC, short for 'Elliptic Curve Cryptography'
-        else if (in_array($data['algorithm'], ['ECDH', 'ECDSA', 'EdDSA'])) {
+        elseif (in_array($data['algorithm'], ['ECDH', 'ECDSA', 'EdDSA'])) {
             $data['crypto'] = 'Elliptic Curve Cryptography';
         }
 

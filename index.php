@@ -8,7 +8,6 @@ load([
 use Kirby\Cms\File;
 use Fundevogel\GnuPG;
 
-
 /**
  * Kirby v3 utilities for GnuPG
  *
@@ -36,8 +35,7 @@ Kirby::plugin('fundevogel/gnupg', [
          *
          * @param \Kirby\Cms\File $file File object of uploaded file
          */
-        'file.create:after' => function(File $file)
-        {
+        'file.create:after' => function (File $file) {
             if ($file->extension() == 'asc') {
                 $file->update((new GnuPG($file->root()))->data);
             }
@@ -50,8 +48,7 @@ Kirby::plugin('fundevogel/gnupg', [
          * @param \Kirby\Cms\File $newFile File object of replacement file
          * @param \Kirby\Cms\File $oldFile File object of file to be replaced
          */
-        'file.replace:after' => function(File $newFile, File $oldFile)
-        {
+        'file.replace:after' => function (File $newFile, File $oldFile) {
             if ($newFile->extension() == 'asc') {
                 $newFile->update((new GnuPG($newFile->root()))->data);
             }

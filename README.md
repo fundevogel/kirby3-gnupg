@@ -51,6 +51,7 @@ WIP: Starting with v1.1.0, files field `fields/pubkey` for single pubkey is incl
 
 ## Roadmap
 
+- [ ] Add tests
 - [ ] Add check for `gpg` binary
 - [x] Add `files` field
 
